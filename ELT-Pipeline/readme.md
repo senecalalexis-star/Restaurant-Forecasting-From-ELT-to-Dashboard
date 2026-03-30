@@ -16,13 +16,13 @@ This project was built for a specific restaurant and is shared for documentation
 
 ## Architecture
 
-![Pipeline architecture](docs/pipeline_architecture.png)
+![Pipeline architecture](ELT-Pipeline/docs/pipeline_architecture.png)
 
 ---
 
 ## Data sources
 
-![Data sources flow](docs/data_sources_flow.png)
+![Data sources flow](ELT-Pipeline/docs/data_sources_flow.png)
 
 | Source | Format | Description |
 |---|---|---|
@@ -37,7 +37,7 @@ This project was built for a specific restaurant and is shared for documentation
 
 The transaction report is parsed by five scripts in strict sequence. Each extracts a different slice of the same receipt and feeds a different table in the database.
 
-![Annotated receipt](docs/annotated_receipt.png)
+![Annotated receipt](ELT-Pipeline/docs/annotated_receipt.png)
 
 ---
 
@@ -62,13 +62,13 @@ The transaction report is parsed by five scripts in strict sequence. Each extrac
 The raw layer is organized into three schemas. Each has a single responsibility — nothing is transformed or filtered at this stage.
 
 ### raw_reference — lookup tables
-![raw_reference schema](docs/raw_reference_schema.png)
+![raw_reference schema](ELT-Pipeline/docs/raw_reference_schema.png)
 
 ### raw_transaction — operational data
-![raw_transaction schema](docs/raw_transaction_schema.png)
+![raw_transaction schema](ELT-Pipeline/docs/raw_transaction_schema.png)
 
 ### raw_weather — external data
-![raw_weather schema](docs/raw_weather_schema.png)
+![raw_weather schema](ELT-Pipeline/docs/raw_weather_schema.png)
 
 The transformation schemas (`stg`, `features`, `forecast`, `mart`) are documented in the dbt README.
 
